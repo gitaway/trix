@@ -48,7 +48,7 @@ class Trix.AttachmentEditorController extends Trix.BasicObject
     element.innerHTML = """
       <div class="trix-button-row">
         <span class="trix-button-group trix-button-group--actions">
-          <button type="button" data-trix-action="remove" class="trix-button trix-button--remove" title="#{lang.remove}">#{lang.remove}</button>
+          <button type="button" data-trix-action="remove" class="trix-button trix-button--remove"></button>
         </span>
       </div>
     """
@@ -76,7 +76,6 @@ class Trix.AttachmentEditorController extends Trix.BasicObject
     textarea = makeElement
       tagName: "textarea"
       className: css.attachmentCaptionEditor
-      attributes: placeholder: lang.captionPlaceholder
       data: trixMutable: true
     textarea.value = @attachmentPiece.getCaption()
 
